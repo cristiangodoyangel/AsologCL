@@ -1,0 +1,90 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Soluciones logísticas integrales para Chile y el mundo. Envíos, transporte, aduanas." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | AsologCL</title>
+		
+		<!-- Open Graph / SEO -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/logo.png" />
+		
+		<style>
+			/* Smooth Reveal Animation for Sections */
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(20px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+			
+			.animate-reveal {
+				animation: fadeIn 0.8s ease-out forwards;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="loading-overlay" class="loading-overlay">
+			<img src="/logo.png" alt="Loading..." class="spinner" width="100" />
+		</div>
+
+		<slot />
+		
+		<script>
+			// Remove loading overlay after load
+			window.addEventListener('load', () => {
+				const overlay = document.getElementById('loading-overlay');
+				if (overlay) {
+					overlay.style.opacity = '0';
+					setTimeout(() => overlay.remove(), 500);
+				}
+			});
+
+			// Reveal animations on scroll
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate-reveal');
+					}
+				});
+			}, { threshold: 0.1 });
+
+			document.querySelectorAll('section, h2, .glass-panel').forEach(el => observer.observe(el));
+		</script>
+
+		<style>
+			/* Loading Overlay Styles */
+			.loading-overlay {
+				position: fixed;
+				inset: 0;
+				background: var(--color-bg);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+				transition: opacity 0.5s ease;
+			}
+			.spinner {
+				animation: pulse 1.5s infinite alternate;
+			}
+			@keyframes pulse {
+				from { transform: scale(1); opacity: 0.7; }
+				to { transform: scale(1.1); opacity: 1; }
+			}
+		</style>
+	</body>
+</html>

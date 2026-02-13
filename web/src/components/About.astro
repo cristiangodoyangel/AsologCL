@@ -1,0 +1,161 @@
+---
+---
+<section class="section about-section" id="about">
+	<div class="container about-container">
+		<div class="about-content animate-reveal">
+			<h3>¿Quiénes Somos?</h3>
+			<h2>Líderes en Logística Integral</h2>
+			<p>En AsologCL, nos dedicamos a simplificar la cadena de suministro de nuestros clientes. Con años de experiencia en el mercado chileno e internacional, ofrecemos soluciones personalizadas que garantizan la seguridad y puntualidad de su carga.</p>
+			
+			<div class="stats-grid">
+				<div class="stat-item">
+					<span class="stat-number">10+</span>
+					<span class="stat-label">Años de Experiencia</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">5k+</span>
+					<span class="stat-label">Envíos Exitosos</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">50+</span>
+					<span class="stat-label">Países Cubiertos</span>
+				</div>
+			</div>
+			
+			<a href="#contact" class="btn btn-primary mt-md">Contáctanos</a>
+		</div>
+		
+		<div class="about-image animate-reveal delay-1">
+			<div class="image-wrapper">
+				<!-- Abstract representation of logistics/globe -->
+				<div class="circle-bg"></div>
+				<div class="card-float card-1">
+					<span>📦</span> Entregas Rápidas
+				</div>
+				<div class="card-float card-2">
+					<span>🛡️</span> Seguro 100%
+				</div>
+				<img src="/logo.png" alt="Asolog Team" class="main-img" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about-section {
+		background-color: var(--color-bg-secondary);
+		overflow: hidden;
+	}
+
+	.about-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	@media (max-width: 900px) {
+		.about-container {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	h3 {
+		color: var(--color-accent-dark);
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		letter-spacing: 2px;
+		margin-bottom: 0.5rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-primary-dark);
+	}
+
+	p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--color-text-light);
+		margin-bottom: 2rem;
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.stat-number {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--color-primary);
+	}
+
+	.stat-label {
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+	}
+
+	.image-wrapper {
+		position: relative;
+		height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.circle-bg {
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		background: var(--color-primary-light);
+		opacity: 0.1;
+		border-radius: 50%;
+		z-index: 0;
+	}
+
+	.main-img {
+		position: relative;
+		z-index: 1;
+		max-width: 80%;
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow-xl);
+		background: white;
+		padding: 2rem;
+	}
+
+	.card-float {
+		position: absolute;
+		background: white;
+		padding: 1rem 1.5rem;
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow-lg);
+		z-index: 2;
+		font-weight: 600;
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		animation: float 6s ease-in-out infinite;
+	}
+
+	.card-1 {
+		top: 10%;
+		left: 0;
+		animation-delay: 0s;
+	}
+
+	.card-2 {
+		bottom: 10%;
+		right: 0;
+		animation-delay: 3s;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-20px); }
+	}
+</style>

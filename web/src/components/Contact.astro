@@ -1,0 +1,167 @@
+---
+---
+<section class="section contact-section" id="contact">
+	<div class="container contact-container">
+		<div class="contact-info animate-reveal">
+			<h2>Contáctanos Hoy Mismo</h2>
+			<p>Estamos listos para resolver tus necesidades logísticas. Completa el formulario y recibe una cotización personalizada en menos de 24 horas.</p>
+			
+			<ul class="contact-details">
+				<li>
+					<span class="icon">📍</span>
+					<div>
+						<strong>Ubicación:</strong>
+						<p>Av. Apoquindo 6400, Las Condes, Santiago, Chile</p>
+					</div>
+				</li>
+				<li>
+					<span class="icon">📞</span>
+					<div>
+						<strong>Teléfono:</strong>
+						<p>+56 2 2123 4567</p>
+					</div>
+				</li>
+				<li>
+					<span class="icon">✉️</span>
+					<div>
+						<strong>Email:</strong>
+						<p>contacto@asolog.cl</p>
+					</div>
+				</li>
+				<li>
+					<span class="icon">🕒</span>
+					<div>
+						<strong>Horario:</strong>
+						<p>Lunes - Viernes: 9:00 - 18:00</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<form class="contact-form glass-panel animate-reveal delay-1" onsubmit="event.preventDefault(); alert('Mensaje enviado (Simulated). We will create backend logic later.');">
+			<h3>Solicitar Cotización</h3>
+			
+			<div class="form-group">
+				<label for="name">Nombre</label>
+				<input type="text" id="name" name="name" required placeholder="Tu nombre" />
+			</div>
+			
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required placeholder="tucorreo@empresa.com" />
+			</div>
+			
+			<div class="form-group">
+				<label for="service">Servicio de Interés</label>
+				<select id="service" name="service">
+					<option value="terrestre">Transporte Terrestre</option>
+					<option value="aereo">Carga Aérea</option>
+					<option value="maritimo">Transporte Marítimo</option>
+					<option value="aduana">Gestión Aduanera</option>
+					<option value="almacenaje">Almacenaje</option>
+					<option value="otro">Otro</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<label for="message">Mensaje</label>
+				<textarea id="message" name="message" rows="4" placeholder="Detalles de tu carga..."></textarea>
+			</div>
+			
+			<button type="submit" class="btn btn-primary w-full">Enviar Solicitud</button>
+		</form>
+	</div>
+</section>
+
+<style>
+	.contact-section {
+		background: linear-gradient(135deg, var(--color-background) 0%, var(--color-bg-secondary) 100%);
+		position: relative;
+	}
+
+	.contact-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+
+	@media (max-width: 900px) {
+		.contact-container {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.contact-info h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.contact-info p {
+		margin-bottom: 2rem;
+		font-size: 1.1rem;
+		color: var(--color-text-light);
+	}
+
+	.contact-details {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.contact-details li {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.icon {
+		font-size: 1.5rem;
+		padding: 0.5rem;
+		background: var(--color-bg-secondary);
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-primary);
+	}
+
+	.contact-form h3 {
+		margin-bottom: 1.5rem;
+		color: var(--color-primary-dark);
+		text-align: center;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		color: var(--color-primary-dark);
+	}
+
+	input, select, textarea {
+		width: 100%;
+		padding: 0.75rem;
+		border: 1px solid #ddd;
+		border-radius: var(--border-radius);
+		font-family: inherit;
+		transition: border-color 0.3s ease;
+	}
+
+	input:focus, select:focus, textarea:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 3px rgba(59, 71, 45, 0.1);
+	}
+
+	.w-full {
+		width: 100%;
+	}
+</style>
