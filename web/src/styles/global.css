@@ -6,8 +6,8 @@
   --color-primary-dark: #2a3320;
   --color-accent: #8bc34a; /* Lighter green for accents */
   --color-accent-dark: #689f38;
-  --color-text: #1a1a1a;
-  --color-text-light: #666;
+  --color-text: #1a2e05; /* Dark Green Text instead of black */
+  --color-text-light: #4a5d3a; /* Lighter green-gray for secondary text */
   --color-bg: #ffffff;
   --color-bg-secondary: #f4f6f2; /* Very light green tint */
 

@@ -1,41 +1,41 @@
 ---
 const services = [
 	{
-		title: "Transporte Terrestre",
-		description: "Flota moderna para entregas nacionales e internacionales con seguimiento en tiempo real.",
-		icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path></svg>`
+		title: "Transporte de Carga",
+		description: "Traslado seguro y eficiente de mercancías a nivel nacional, contando con una flota moderna y monitoreo en tiempo real para garantizar entregas puntuales.",
+		icon: `<svg class="w-12 h-12" fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path></svg>`
 	},
 	{
-		title: "Carga Aérea",
-		description: "Soluciones rápidas para envíos urgentes a cualquier parte del mundo.",
-		icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>`
+		title: "Logística Internacional",
+		description: "Gestión integral de operaciones de importación y exportación, coordinando transporte marítimo, aéreo y terrestre con manejo experto de trámites aduaneros.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plane-arrival"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.157 11.81l4.83 1.295a2 2 0 1 1 -1.036 3.863l-14.489 -3.882l-1.345 -6.572l2.898 .776l1.414 2.45l2.898 .776l-.12 -7.279l2.898 .777l2.052 7.797" /><path d="M3 21h18" /></svg>`
 	},
 	{
-		title: "Transporte Marítimo",
-		description: "Gestión eficiente de contenedores y carga consolidada para operaciones globales.",
-		icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>` // Using lightning for speed/efficiency metaphor as ship is complex
+		title: "Almacenamiento Seguro",
+		description: "Bodegas estratégicas con vigilancia 24/7 y sistemas de control ambiental, diseñadas para el resguardo óptimo de sus activos a corto o largo plazo.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-warehouse"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21v-13l9 -4l9 4v13" /><path d="M13 13h4v8h-10v-6h6" /><path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3" /></svg>` // Using lightning for speed/efficiency metaphor as ship is complex
+	}, 	
+	{
+		title: "Gestión de Inventarios",
+		description: "Control preciso de stock mediante tecnología avanzada, permitiendo una trazabilidad exacta, optimización de espacios y reducción de mermas.",
+		icon: `<svg class="w-12 h-12" fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>`
 	},
 	{
-		title: "Gestión Aduanera",
-		description: "Asesoría experta en trámites de importación y exportación para evitar retrasos.",
-		icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>`
+		title: "Asesoría Logística",
+		description: "Consultoría especializada para analizar y mejorar su cadena de suministro, enfocada en la reducción de costos operativos y aumento de la eficiencia.",
+		icon: `<svg class="w-12 h-12" fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>`
 	},
 	{
-		title: "Almacenaje y Distribución",
-		description: "Centros de distribución estratégicos para optimize su cadena de suministro.",
-		icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>`
-	},
-	{
-		title: "Seguro de Carga",
-		description: "Protección total para su mercancía desde origen hasta destino final.",
-		icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>`
+		title: "Distribución de Mercancías",
+		description: "Soluciones de última milla y reparto capilar para asegurar que sus productos lleguen a los puntos de venta o clientes finales en perfectas condiciones.",
+		icon: `<svg class="w-12 h-12" fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>`
 	}
 ];
 ---
 <section id="services" class="section">
 	<div class="container">
 		<div class="section-header text-center mb-lg">
-			<h2 class="animate-reveal">Nuestros Servicios</h2>
+			<h2 class="animate-reveal font-bold text-3xl text-primary">Nuestros Servicios</h2>
 			<p class="animate-reveal delay-1">Soluciones integrales adaptadas a las necesidades de su negocio.</p>
 		</div>
 		
@@ -94,7 +94,7 @@ const services = [
 	.service-card:hover .icon-wrapper {
 		background: var(--color-primary);
 		color: white;
-		transform: scale(1.1) rotate(5deg);
+		transform: scale(1.1);
 	}
 
 	h3 {

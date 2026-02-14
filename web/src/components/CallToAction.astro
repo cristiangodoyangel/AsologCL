@@ -1,0 +1,126 @@
+---
+---
+
+<section class="cta-section">
+  <!-- Dynamic Background -->
+  <div class="cta-bg-wrapper">
+    <div class="cta-bg-image"></div>
+    <div class="cta-bg-overlay"></div>
+  </div>
+
+  <div class="container cta-content">
+    <h2 class="title">
+      ¿Listo para optimizar tu logística?
+    </h2>
+    <p class="description">
+      Déjanos encargarnos de tus envíos mientras tú te enfocas en hacer crecer tu negocio. Soluciones a medida, a un clic de distancia.
+    </p>
+    
+    <div class="btn-group">
+      <a href="#contact" class="btn btn-accent btn-lg">
+        Contáctanos Ahora
+      </a>
+      <a href="#services" class="btn btn-outline-white btn-lg">
+        Ver Servicios
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+    .cta-section {
+        position: relative;
+        padding: 6rem 0;
+        overflow: hidden;
+    }
+
+    .cta-bg-wrapper {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-color: var(--color-primary-dark);
+    }
+
+    .cta-bg-image {
+        position: absolute;
+        inset: 0;
+        background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        mix-blend-mode: overlay;
+    }
+
+    .cta-bg-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(42, 51, 32, 0.9), rgba(59, 71, 45, 0.8));
+    }
+
+    .cta-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        color: white;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    @media (min-width: 768px) {
+        .title {
+            font-size: 3rem;
+        }
+    }
+
+    .description {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2.5rem;
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 640px) {
+        .btn-group {
+            flex-direction: row;
+        }
+    }
+
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .btn-accent:hover {
+        box-shadow: 0 0 15px rgba(139, 195, 74, 0.4);
+    }
+
+    .btn-outline-white {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+    }
+
+    .btn-outline-white:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+</style>
